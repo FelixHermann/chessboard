@@ -1,0 +1,16 @@
+Find a way on the chessboard
+----------------------------
+
+This program finds a way on a chessboard.
+The chessboard's size is infinite.
+A field on the board is identified by a 2-tupel of positive integers.
+The input of the program are two fields: the starting point and the goal.
+The command line argument consists of four numbers:
+* x-value of start field
+* y-value of start field
+* x-value of goal
+* y-value of goal
+The output of the program is a list of fields.
+The first entry of the list is the starting point and the last entry is the goal.
+
+Author: Felix Benz-Baldas
