@@ -13,4 +13,7 @@ The command line argument consists of four numbers:
 The output of the program is a list of fields.
 The first entry of the list is the starting point and the last entry is the goal.
 
+Example: If you run the program with "1 1 5 5" as command line argument, you will get:
+[(1,1), (2,1), (3,1), (4,1), (5,1), (5,2), (5,3), (5,4), (5,5)]
+
 Author: Felix Benz-Baldas
