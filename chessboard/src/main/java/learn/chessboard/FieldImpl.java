@@ -5,7 +5,7 @@ public class FieldImpl implements Field {
 	private int y;
 	
 	public FieldImpl(int x, int y) {
-		if (checkArguments(x, y)) {
+		if (checkArgument(x, y)) {
 			initialize(x, y);
 		} else {
 			throw new IllegalArgumentException("All arguments have to be greater than zero!");
@@ -17,7 +17,7 @@ public class FieldImpl implements Field {
 		this.y = y;
 	}
 
-	static private boolean checkArguments(int x, int y) {
+	static private boolean checkArgument(int x, int y) {
 		return (x > 0 && y > 0);
 	}
 
@@ -29,4 +29,12 @@ public class FieldImpl implements Field {
 		return y;
 	}
 
+	public boolean sameAs(Field field) {
+		return this.x == field.getX() && this.y == field.getY();
+	}
+
+	@Override
+	public String toString() {
+		return "(" + this.x + "," + this.y + ")";
+	}
 }
