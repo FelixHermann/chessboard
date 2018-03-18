@@ -1,5 +1,8 @@
 package learn.chessboard;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 public class FieldImpl implements Field {
 	private int x;
 	private int y;
@@ -36,5 +39,23 @@ public class FieldImpl implements Field {
 	@Override
 	public String toString() {
 		return "(" + this.x + "," + this.y + ")";
+	}
+
+	@Override
+	public int hashCode() {
+		return new HashCodeBuilder(17, 31). // two randomly chosen prime numbers
+				append(x).append(y).toHashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		} else if (!(obj instanceof FieldImpl)) {
+			return false;
+		} else {
+			FieldImpl other = (FieldImpl) obj;
+			return new EqualsBuilder().append(x, other.x).append(y, other.y).isEquals();	
+		}
 	}
 }
