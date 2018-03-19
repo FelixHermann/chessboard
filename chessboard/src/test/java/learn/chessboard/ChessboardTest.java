@@ -11,7 +11,7 @@ public class ChessboardTest {
 	public void test1() {
 		Chessboard chessboard = new ChessboardImpl();
 		List<Field> solution = chessboard.findWay(new FieldImpl(1, 1), new FieldImpl(1, 1));
-		assert(solution.get(0).sameAs(new FieldImpl(1, 1)));
+		assert(solution.get(0).equals(new FieldImpl(1, 1)));
 		assert(solution.size() == 1);
 	}
 
@@ -20,7 +20,7 @@ public class ChessboardTest {
 		Chessboard chessboard = new ChessboardImpl();
 		List<Field> solution = chessboard.findWay(new FieldImpl(1, 1), new FieldImpl(1, 2));
 		assert(solution.size() == 2);
-		assert(solution.get(1).sameAs(new FieldImpl(1, 2)));
+		assert(solution.get(1).equals(new FieldImpl(1, 2)));
 	}
 	
 	@Test
@@ -28,6 +28,6 @@ public class ChessboardTest {
 		Chessboard chessboard = new ChessboardImpl();
 		List<Field> solution = chessboard.findWay(new FieldImpl(5, 3), new FieldImpl(2, 2));
 		assert(solution.size() == 5);
-		assert(solution.get(3).sameAs(new FieldImpl(2,  3)));
+		assert(solution.get(3).equals(new FieldImpl(2,  3)));
 	}
 }

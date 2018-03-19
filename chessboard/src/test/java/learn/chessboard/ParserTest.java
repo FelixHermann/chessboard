@@ -8,6 +8,6 @@ public class ParserTest {
 	public void test() {
 		Parser parser = new ParserImpl();
 		parser.parse("1 2 3 4".split(" "));
-		assert(parser.getStart().sameAs(new FieldImpl(1, 2)));
+		assert(parser.getStart().equals(new FieldImpl(1, 2)));
 	}
 }

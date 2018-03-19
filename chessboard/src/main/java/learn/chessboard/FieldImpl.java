@@ -32,10 +32,6 @@ public class FieldImpl implements Field {
 		return y;
 	}
 
-	public boolean sameAs(Field field) {
-		return this.x == field.getX() && this.y == field.getY();
-	}
-
 	@Override
 	public String toString() {
 		return "(" + this.x + "," + this.y + ")";
